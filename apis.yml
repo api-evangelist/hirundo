@@ -1,23 +1,76 @@
 aid: hirundo
+
 name: Hirundo
-description: 'Hirundo is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/660ac5137d0f7fda07d7ce65/6612706c7c1f0f80e8973596_Hirundo%20OpenGraph%20Image.png
+
+description: 'Hirundo provides a machine unlearning platform that surgically removes risky knowledge and behavior from trained large language models at the model level, without retraining. The service is aimed at AI and product teams, security and privacy teams, and frontier AI labs that need to mitigate jailbreaks, hallucinations, bias, and memorized PII in production models. It enables enterprises to fix model risks quickly, reducing launch delays and improving compliance.'
+
 url: https://raw.githubusercontent.com/api-evangelist/hirundo/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
-- Company
-apis: []
+- Machine Unlearning
+- AI Safety
+- Model Security
+- Data Privacy
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/hirundo-hosts.yml
+- type: Vendors
+  url: vendors/hirundo-vendors.yml
+- type: SDKs
+  url: packages/hirundo-packages.yml
+- type: Packages
+  url: packages/hirundo-packages.yml
+- type: TermsOfService
+  url: https://www.hirundo.io/tos
+- type: PrivacyPolicy
+  url: https://www.hirundo.io/privacy-policy
+- type: Blog
+  url: https://www.hirundo.io/blog
+- type: Documentation
+  url: https://docs.hirundo.io/
+- type: DomainSecurity
+  url: security/hirundo-domain-security.yml
 - type: Website
   url: https://hirundo.io/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-20'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://hirundo.io/
+    status: 200
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
